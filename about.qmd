@@ -29,3 +29,6 @@ R, Quarto, Git, Python
 
 # Hobbies
 Basketball, Gym, Music, Coloring, Legos, Watches, Cars, Books, Cooking.
+
+# Download My CV
+[Download my CV](İlhanEmreCanCV.pdf)

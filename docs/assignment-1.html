@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Assignment 2 – Ilhan Emre Can’s Analytics Lab</title>
+<title>Assignment 1 – Ilhan Emre Can’s Analytics Lab</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,31 +23,65 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../assignments/assignment-1.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-b6a8276bf55561bdbc268162d41bd1f7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-a8da12e74b29c2e7b17644f84b91567b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-b6a8276bf55561bdbc268162d41bd1f7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-6598461ff1bf7084bf14536e9c45f7d7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-7228469e8177cf19fa3481c50c5a92b0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-6598461ff1bf7084bf14536e9c45f7d7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-b6a8276bf55561bdbc268162d41bd1f7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-a8da12e74b29c2e7b17644f84b91567b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-b6a8276bf55561bdbc268162d41bd1f7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-6598461ff1bf7084bf14536e9c45f7d7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-7228469e8177cf19fa3481c50c5a92b0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-6598461ff1bf7084bf14536e9c45f7d7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,10 +111,10 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -249,7 +283,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Ilhan Emre Can’s Analytics Lab</span>
     </a>
   </div>
@@ -260,15 +294,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../posts.html"> 
+    <a class="nav-link" href="./posts.html"> 
 <span class="menu-text">My Posts</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -277,11 +311,11 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-emu430-coursework">    
         <li>
-    <a class="dropdown-item" href="../assignments.html">
+    <a class="dropdown-item" href="./assignments.html">
  <span class="dropdown-text">Assignments</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../project.html">
+    <a class="dropdown-item" href="./project.html">
  <span class="dropdown-text">Project</span></a>
   </li>  
     </ul>
@@ -296,56 +330,16 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../assignments/assignment-2.html">Assignment 2</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../assignments.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">My Assignments</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../assignments/assignment-1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Assignment 1</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../assignments/assignment-2.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Assignment 2</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
     <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#assignment-2" id="toc-assignment-2" class="nav-link active" data-scroll-target="#assignment-2">Assignment 2</a></li>
+  <li><a href="#assignment-1---ilhan-emre-can" id="toc-assignment-1---ilhan-emre-can" class="nav-link active" data-scroll-target="#assignment-1---ilhan-emre-can">Assignment 1 - ilhan emre can</a></li>
   </ul>
 </nav>
 </nav>
@@ -359,7 +353,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Assignment 2</h1>
+<h1 class="title">Assignment 1</h1>
 </div>
 
 
@@ -376,8 +370,223 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="assignment-2" class="level1">
-<h1>Assignment 2</h1>
+<section id="assignment-1---ilhan-emre-can" class="level2">
+<h2 class="anchored" data-anchor-id="assignment-1---ilhan-emre-can">Assignment 1 - ilhan emre can</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dslabs)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>my_first <span class="ot">&lt;-</span> <span class="st">"ilhan"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>my_birth_year <span class="ot">&lt;-</span> <span class="dv">2002</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> (<span class="fu">nchar</span>(my_first) <span class="sc">+</span> my_birth_year) <span class="sc">%%</span> <span class="dv">15</span> <span class="sc">+</span> <span class="dv">8</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>k</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 20</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"polls_us_election_2016"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>polls <span class="ot">&lt;-</span> polls_us_election_2016</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(polls)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  state  startdate    enddate
+1  U.S. 2016-11-03 2016-11-06
+2  U.S. 2016-11-01 2016-11-07
+3  U.S. 2016-11-02 2016-11-06
+4  U.S. 2016-11-04 2016-11-07
+5  U.S. 2016-11-03 2016-11-06
+6  U.S. 2016-11-03 2016-11-06
+                                                    pollster grade samplesize
+1                                   ABC News/Washington Post    A+       2220
+2                                    Google Consumer Surveys     B      26574
+3                                                      Ipsos    A-       2195
+4                                                     YouGov     B       3677
+5                                           Gravis Marketing    B-      16639
+6 Fox News/Anderson Robbins Research/Shaw &amp; Company Research     A       1295
+  population rawpoll_clinton rawpoll_trump rawpoll_johnson rawpoll_mcmullin
+1         lv           47.00         43.00            4.00               NA
+2         lv           38.03         35.69            5.46               NA
+3         lv           42.00         39.00            6.00               NA
+4         lv           45.00         41.00            5.00               NA
+5         rv           47.00         43.00            3.00               NA
+6         lv           48.00         44.00            3.00               NA
+  adjpoll_clinton adjpoll_trump adjpoll_johnson adjpoll_mcmullin
+1        45.20163      41.72430        4.626221               NA
+2        43.34557      41.21439        5.175792               NA
+3        42.02638      38.81620        6.844734               NA
+4        45.65676      40.92004        6.069454               NA
+5        46.84089      42.33184        3.726098               NA
+6        49.02208      43.95631        3.057876               NA</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>total_na <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(polls))</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>total_na</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 11604</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>na_per_column <span class="ot">&lt;-</span> <span class="fu">colSums</span>(<span class="fu">is.na</span>(polls))</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>na_sorted <span class="ot">&lt;-</span> <span class="fu">sort</span>(na_per_column, <span class="at">decreasing =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>top_8_na <span class="ot">&lt;-</span> <span class="fu">head</span>(na_sorted, <span class="dv">8</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>top_8_na</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>rawpoll_mcmullin adjpoll_mcmullin  rawpoll_johnson  adjpoll_johnson 
+            4178             4178             1409             1409 
+           grade       samplesize            state        startdate 
+             429                1                0                0 </code></pre>
+</div>
+</div>
+<p><strong>help of ai</strong></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>new_data <span class="ot">&lt;-</span> polls</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>numeric_value <span class="ot">&lt;-</span> my_birth_year <span class="sc">+</span> k</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>text_value <span class="ot">&lt;-</span> <span class="fu">paste0</span>(my_first, <span class="st">"_"</span>, k)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(col <span class="cf">in</span> <span class="fu">names</span>(new_data)){</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">is.numeric</span>(new_data[[col]])){</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    new_data[[col]][<span class="fu">is.na</span>(new_data[[col]])] <span class="ot">&lt;-</span> numeric_value</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(col <span class="cf">in</span> <span class="fu">names</span>(new_data)){</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">is.character</span>(new_data[[col]])){</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    new_data[[col]][<span class="fu">is.na</span>(new_data[[col]])] <span class="ot">&lt;-</span> text_value</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">is.factor</span>(new_data[[col]])){</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    new_data[[col]] <span class="ot">&lt;-</span> <span class="fu">as.character</span>(new_data[[col]])</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    new_data[[col]][<span class="fu">is.na</span>(new_data[[col]])] <span class="ot">&lt;-</span> text_value</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(k <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>){</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  result_new <span class="ot">&lt;-</span> <span class="fu">head</span>(new_data, k)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  result_new <span class="ot">&lt;-</span> <span class="fu">tail</span>(new_data, k)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>result_new</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>            state  startdate    enddate
+1            U.S. 2016-11-03 2016-11-06
+2            U.S. 2016-11-01 2016-11-07
+3            U.S. 2016-11-02 2016-11-06
+4            U.S. 2016-11-04 2016-11-07
+5            U.S. 2016-11-03 2016-11-06
+6            U.S. 2016-11-03 2016-11-06
+7            U.S. 2016-11-02 2016-11-06
+8            U.S. 2016-11-03 2016-11-05
+9      New Mexico 2016-11-06 2016-11-06
+10           U.S. 2016-11-04 2016-11-07
+11           U.S. 2016-11-04 2016-11-06
+12           U.S. 2016-11-01 2016-11-04
+13           U.S. 2016-11-03 2016-11-06
+14       Virginia 2016-11-03 2016-11-04
+15           U.S. 2016-11-01 2016-11-03
+16           Iowa 2016-11-01 2016-11-04
+17           U.S. 2016-11-05 2016-11-07
+18      Wisconsin 2016-10-26 2016-10-31
+19 North Carolina 2016-11-04 2016-11-06
+20        Georgia 2016-11-06 2016-11-06
+                                                     pollster    grade
+1                                    ABC News/Washington Post       A+
+2                                     Google Consumer Surveys        B
+3                                                       Ipsos       A-
+4                                                      YouGov        B
+5                                            Gravis Marketing       B-
+6  Fox News/Anderson Robbins Research/Shaw &amp; Company Research        A
+7                                     CBS News/New York Times       A-
+8                                NBC News/Wall Street Journal       A-
+9                                                    Zia Poll ilhan_20
+10                                                   IBD/TIPP       A-
+11                                           Selzer &amp; Company       A+
+12                                          Angus Reid Global       A-
+13                                        Monmouth University       A+
+14                                      Public Policy Polling       B+
+15                                             Marist College        A
+16                                           Selzer &amp; Company       A+
+17                                   The Times-Picayune/Lucid ilhan_20
+18                                       Marquette University        A
+19                                              Siena College        A
+20                                    Landmark Communications        B
+   samplesize population rawpoll_clinton rawpoll_trump rawpoll_johnson
+1        2220         lv           47.00         43.00            4.00
+2       26574         lv           38.03         35.69            5.46
+3        2195         lv           42.00         39.00            6.00
+4        3677         lv           45.00         41.00            5.00
+5       16639         rv           47.00         43.00            3.00
+6        1295         lv           48.00         44.00            3.00
+7        1426         lv           45.00         41.00            5.00
+8        1282         lv           44.00         40.00            6.00
+9        8439         lv           46.00         44.00            6.00
+10       1107         lv           41.20         42.70            7.10
+11        799         lv           44.00         41.00            4.00
+12       1151         lv           48.00         44.00            6.00
+13        748         lv           50.00         44.00            4.00
+14       1238         lv           48.00         43.00            1.00
+15        940         lv           44.00         43.00            6.00
+16        800         lv           39.00         46.00            6.00
+17       2521         lv           45.00         40.00            5.00
+18       1255         lv           46.00         40.00            4.00
+19        800         lv           44.00         44.00            3.00
+20       1200         lv           46.00         49.00            3.00
+   rawpoll_mcmullin adjpoll_clinton adjpoll_trump adjpoll_johnson
+1              2022        45.20163      41.72430        4.626221
+2              2022        43.34557      41.21439        5.175792
+3              2022        42.02638      38.81620        6.844734
+4              2022        45.65676      40.92004        6.069454
+5              2022        46.84089      42.33184        3.726098
+6              2022        49.02208      43.95631        3.057876
+7              2022        45.11649      40.92722        4.341786
+8              2022        43.58576      40.77325        5.365788
+9              2022        44.82594      41.59978        7.870127
+10             2022        42.92745      42.23545        6.316175
+11             2022        44.21714      40.57082        4.068708
+12             2022        47.57171      43.68125        5.556625
+13             2022        48.86765      43.39600        4.838600
+14             2022        47.43805      42.32751        2.207659
+15             2022        42.83406      43.43819        4.780429
+16             2022        39.37561      45.66917        6.062713
+17             2022        45.13966      42.26495        3.679914
+18             2022        46.10344      40.97982        2.897062
+19             2022        44.21875      45.08290        2.335250
+20             2022        45.06470      48.80363        3.662548
+   adjpoll_mcmullin
+1              2022
+2              2022
+3              2022
+4              2022
+5              2022
+6              2022
+7              2022
+8              2022
+9              2022
+10             2022
+11             2022
+12             2022
+13             2022
+14             2022
+15             2022
+16             2022
+17             2022
+18             2022
+19             2022
+20             2022</code></pre>
+</div>
+</div>
+<p><strong>ai help ends</strong></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">is.na</span>(new_data))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">anyNA</span>(new_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+</div>
 
 
 </section>
@@ -796,15 +1005,6 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../assignments/assignment-1.html" class="pagination-link" aria-label="Assignment 1">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Assignment 1</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

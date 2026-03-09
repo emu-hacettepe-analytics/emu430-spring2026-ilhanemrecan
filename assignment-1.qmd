@@ -31,6 +31,8 @@ top_8_na <- head(na_sorted, 8)
 top_8_na
 ```
 
+**help of ai**
+
 ```{r}
 new_data <- polls
 
@@ -63,6 +65,8 @@ if(k %% 2 == 0){
 
 result_new
 ```
+
+**ai help ends**
 
 ```{r}
 sum(is.na(new_data))

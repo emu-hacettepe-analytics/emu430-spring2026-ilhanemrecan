@@ -339,7 +339,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#assignment-1---ilhan-emre-can" id="toc-assignment-1---ilhan-emre-can" class="nav-link active" data-scroll-target="#assignment-1---ilhan-emre-can">Assignment 1 - ilhan emre can</a></li>
+  <li><a href="#a" id="toc-a" class="nav-link active" data-scroll-target="#a">(a)</a></li>
+  <li><a href="#b" id="toc-b" class="nav-link" data-scroll-target="#b">(b)</a></li>
   </ul>
 </nav>
 </nav>
@@ -370,8 +371,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="assignment-1---ilhan-emre-can" class="level2">
-<h2 class="anchored" data-anchor-id="assignment-1---ilhan-emre-can">Assignment 1 - ilhan emre can</h2>
+<p>My first assignment has two parts.</p>
+<section id="a" class="level2">
+<h2 class="anchored" data-anchor-id="a">(a)</h2>
+<p>Video : Veri Bilimi ve Endüstri Mühendisliği Üzerine Sohbetler - Baykal Hafızoğlu &amp; Erdi Daşdemir</p>
+<p>Summary: In his speech, Mr.&nbsp;Hafızoğlu started with his career path and his educational background. He shared his valuable insights on OR, optimization and data analytics. It was repeatedly mentioned that optimization alone is not enough, the real value of analytic solutions can only be seen when they meet the final customer. A good and simple problem definition goes a long way, he said. Measurable KPI’s and deployment of models is also very important. Early feedback is king, coupled with good UI and UX makes them an almost undefeatable group. He heavily advised us industrial engineering students to learn mathematical modeling and always improve our coding skills.</p>
+<p>open-ended Q : What does it mean to “deploy models, not laptops”? A : According to Hafızoğlu, many analytics projects fail because they do not reach the final customer. So this means that for a model to be actually considered valuable, not only it should be accessible on a personal computer, but it should also be deployed on a platform/system that reaches the final customer.</p>
+<p>multi choice Q : Into which four main categories the analytics wordl was divided? A) Optimization, simulation, coding, deployment B) Descriptive, diagnostic, predictive, prescriptive C) Statistical, financial, managerial, computational D) Data collection, storage, cleaning, visualization answer : B</p>
+</section>
+<section id="b" class="level2">
+<h2 class="anchored" data-anchor-id="b">(b)</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dslabs)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -386,36 +395,99 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"polls_us_election_2016"</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>polls <span class="ot">&lt;-</span> polls_us_election_2016</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(polls)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (k <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  result_original <span class="ot">&lt;-</span> <span class="fu">head</span>(polls, k)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  result_original <span class="ot">&lt;-</span> <span class="fu">tail</span>(polls, k)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>result_original</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  state  startdate    enddate
-1  U.S. 2016-11-03 2016-11-06
-2  U.S. 2016-11-01 2016-11-07
-3  U.S. 2016-11-02 2016-11-06
-4  U.S. 2016-11-04 2016-11-07
-5  U.S. 2016-11-03 2016-11-06
-6  U.S. 2016-11-03 2016-11-06
-                                                    pollster grade samplesize
-1                                   ABC News/Washington Post    A+       2220
-2                                    Google Consumer Surveys     B      26574
-3                                                      Ipsos    A-       2195
-4                                                     YouGov     B       3677
-5                                           Gravis Marketing    B-      16639
-6 Fox News/Anderson Robbins Research/Shaw &amp; Company Research     A       1295
-  population rawpoll_clinton rawpoll_trump rawpoll_johnson rawpoll_mcmullin
-1         lv           47.00         43.00            4.00               NA
-2         lv           38.03         35.69            5.46               NA
-3         lv           42.00         39.00            6.00               NA
-4         lv           45.00         41.00            5.00               NA
-5         rv           47.00         43.00            3.00               NA
-6         lv           48.00         44.00            3.00               NA
-  adjpoll_clinton adjpoll_trump adjpoll_johnson adjpoll_mcmullin
-1        45.20163      41.72430        4.626221               NA
-2        43.34557      41.21439        5.175792               NA
-3        42.02638      38.81620        6.844734               NA
-4        45.65676      40.92004        6.069454               NA
-5        46.84089      42.33184        3.726098               NA
-6        49.02208      43.95631        3.057876               NA</code></pre>
+<pre><code>            state  startdate    enddate
+1            U.S. 2016-11-03 2016-11-06
+2            U.S. 2016-11-01 2016-11-07
+3            U.S. 2016-11-02 2016-11-06
+4            U.S. 2016-11-04 2016-11-07
+5            U.S. 2016-11-03 2016-11-06
+6            U.S. 2016-11-03 2016-11-06
+7            U.S. 2016-11-02 2016-11-06
+8            U.S. 2016-11-03 2016-11-05
+9      New Mexico 2016-11-06 2016-11-06
+10           U.S. 2016-11-04 2016-11-07
+11           U.S. 2016-11-04 2016-11-06
+12           U.S. 2016-11-01 2016-11-04
+13           U.S. 2016-11-03 2016-11-06
+14       Virginia 2016-11-03 2016-11-04
+15           U.S. 2016-11-01 2016-11-03
+16           Iowa 2016-11-01 2016-11-04
+17           U.S. 2016-11-05 2016-11-07
+18      Wisconsin 2016-10-26 2016-10-31
+19 North Carolina 2016-11-04 2016-11-06
+20        Georgia 2016-11-06 2016-11-06
+                                                     pollster grade samplesize
+1                                    ABC News/Washington Post    A+       2220
+2                                     Google Consumer Surveys     B      26574
+3                                                       Ipsos    A-       2195
+4                                                      YouGov     B       3677
+5                                            Gravis Marketing    B-      16639
+6  Fox News/Anderson Robbins Research/Shaw &amp; Company Research     A       1295
+7                                     CBS News/New York Times    A-       1426
+8                                NBC News/Wall Street Journal    A-       1282
+9                                                    Zia Poll  &lt;NA&gt;       8439
+10                                                   IBD/TIPP    A-       1107
+11                                           Selzer &amp; Company    A+        799
+12                                          Angus Reid Global    A-       1151
+13                                        Monmouth University    A+        748
+14                                      Public Policy Polling    B+       1238
+15                                             Marist College     A        940
+16                                           Selzer &amp; Company    A+        800
+17                                   The Times-Picayune/Lucid  &lt;NA&gt;       2521
+18                                       Marquette University     A       1255
+19                                              Siena College     A        800
+20                                    Landmark Communications     B       1200
+   population rawpoll_clinton rawpoll_trump rawpoll_johnson rawpoll_mcmullin
+1          lv           47.00         43.00            4.00               NA
+2          lv           38.03         35.69            5.46               NA
+3          lv           42.00         39.00            6.00               NA
+4          lv           45.00         41.00            5.00               NA
+5          rv           47.00         43.00            3.00               NA
+6          lv           48.00         44.00            3.00               NA
+7          lv           45.00         41.00            5.00               NA
+8          lv           44.00         40.00            6.00               NA
+9          lv           46.00         44.00            6.00               NA
+10         lv           41.20         42.70            7.10               NA
+11         lv           44.00         41.00            4.00               NA
+12         lv           48.00         44.00            6.00               NA
+13         lv           50.00         44.00            4.00               NA
+14         lv           48.00         43.00            1.00               NA
+15         lv           44.00         43.00            6.00               NA
+16         lv           39.00         46.00            6.00               NA
+17         lv           45.00         40.00            5.00               NA
+18         lv           46.00         40.00            4.00               NA
+19         lv           44.00         44.00            3.00               NA
+20         lv           46.00         49.00            3.00               NA
+   adjpoll_clinton adjpoll_trump adjpoll_johnson adjpoll_mcmullin
+1         45.20163      41.72430        4.626221               NA
+2         43.34557      41.21439        5.175792               NA
+3         42.02638      38.81620        6.844734               NA
+4         45.65676      40.92004        6.069454               NA
+5         46.84089      42.33184        3.726098               NA
+6         49.02208      43.95631        3.057876               NA
+7         45.11649      40.92722        4.341786               NA
+8         43.58576      40.77325        5.365788               NA
+9         44.82594      41.59978        7.870127               NA
+10        42.92745      42.23545        6.316175               NA
+11        44.21714      40.57082        4.068708               NA
+12        47.57171      43.68125        5.556625               NA
+13        48.86765      43.39600        4.838600               NA
+14        47.43805      42.32751        2.207659               NA
+15        42.83406      43.43819        4.780429               NA
+16        39.37561      45.66917        6.062713               NA
+17        45.13966      42.26495        3.679914               NA
+18        46.10344      40.97982        2.897062               NA
+19        44.21875      45.08290        2.335250               NA
+20        45.06470      48.80363        3.662548               NA</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -444,24 +516,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>numeric_value <span class="ot">&lt;-</span> my_birth_year <span class="sc">+</span> k</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>text_value <span class="ot">&lt;-</span> <span class="fu">paste0</span>(my_first, <span class="st">"_"</span>, k)</span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(col <span class="cf">in</span> <span class="fu">names</span>(new_data)){</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">is.numeric</span>(new_data[[col]])){</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (col <span class="cf">in</span> <span class="fu">names</span>(new_data)) {</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">is.numeric</span>(new_data[[col]])) {</span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    new_data[[col]][<span class="fu">is.na</span>(new_data[[col]])] <span class="ot">&lt;-</span> numeric_value</span>
 <span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(col <span class="cf">in</span> <span class="fu">names</span>(new_data)){</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">is.character</span>(new_data[[col]])){</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (col <span class="cf">in</span> <span class="fu">names</span>(new_data)) {</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">is.character</span>(new_data[[col]])) {</span>
 <span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    new_data[[col]][<span class="fu">is.na</span>(new_data[[col]])] <span class="ot">&lt;-</span> text_value</span>
 <span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">is.factor</span>(new_data[[col]])){</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">is.factor</span>(new_data[[col]])) {</span>
 <span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    new_data[[col]] <span class="ot">&lt;-</span> <span class="fu">as.character</span>(new_data[[col]])</span>
 <span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    new_data[[col]][<span class="fu">is.na</span>(new_data[[col]])] <span class="ot">&lt;-</span> text_value</span>
 <span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(k <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>){</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (k <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>) {</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  result_new <span class="ot">&lt;-</span> <span class="fu">head</span>(new_data, k)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  result_new <span class="ot">&lt;-</span> <span class="fu">tail</span>(new_data, k)</span>

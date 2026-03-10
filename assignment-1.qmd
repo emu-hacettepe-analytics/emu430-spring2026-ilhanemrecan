@@ -2,7 +2,21 @@
 title: "Assignment 1"
 ---
 
-## Assignment 1 - ilhan emre can
+My first assignment has two parts.
+
+## (a)
+
+Video : Veri Bilimi ve Endüstri Mühendisliği Üzerine Sohbetler - Baykal Hafızoğlu & Erdi Daşdemir
+
+Summary: In his speech, Mr. Hafızoğlu started with his career path and his educational background. He shared his valuable insights on OR, optimization and data analytics. It was repeatedly mentioned that optimization alone is not enough, the real value of analytic solutions can only be seen when they meet the final customer. A good and simple problem definition goes a long way, he said. Measurable KPI's and deployment of models is also very important. Early feedback is king, coupled with good UI and UX makes them an almost undefeatable group. He heavily advised us industrial engineering students to learn mathematical modeling and always improve our coding skills.
+
+open-ended Q : What does it mean to "deploy models, not laptops"? A : According to Hafızoğlu, many analytics projects fail because they do not reach the final customer. So this means that for a model to be actually considered valuable, not only it should be accessible on a personal computer, but it should also be deployed on a platform/system that reaches the final customer.
+
+multi choice Q : Into which four main categories the analytics wordl was divided? A) Optimization, simulation, coding, deployment B) Descriptive, diagnostic, predictive, prescriptive C) Statistical, financial, managerial, computational D) Data collection, storage, cleaning, visualization
+answer : B 
+
+
+## (b)
 
 ```{r}
 library(dslabs)
@@ -16,7 +30,14 @@ k
 ```{r}
 data("polls_us_election_2016")
 polls <- polls_us_election_2016
-head(polls)
+
+if (k %% 2 == 0) {
+  result_original <- head(polls, k)
+} else {
+  result_original <- tail(polls, k)
+}
+
+result_original
 ```
 
 ```{r}
@@ -39,17 +60,17 @@ new_data <- polls
 numeric_value <- my_birth_year + k
 text_value <- paste0(my_first, "_", k)
 
-for(col in names(new_data)){
-  if(is.numeric(new_data[[col]])){
+for (col in names(new_data)) {
+  if (is.numeric(new_data[[col]])) {
     new_data[[col]][is.na(new_data[[col]])] <- numeric_value
   }
 }
 
-for(col in names(new_data)){
-  if(is.character(new_data[[col]])){
+for (col in names(new_data)) {
+  if (is.character(new_data[[col]])) {
     new_data[[col]][is.na(new_data[[col]])] <- text_value
   }
-  if(is.factor(new_data[[col]])){
+  if (is.factor(new_data[[col]])) {
     new_data[[col]] <- as.character(new_data[[col]])
     new_data[[col]][is.na(new_data[[col]])] <- text_value
   }
@@ -57,7 +78,7 @@ for(col in names(new_data)){
 ```
 
 ```{r}
-if(k %% 2 == 0){
+if (k %% 2 == 0) {
   result_new <- head(new_data, k)
 } else {
   result_new <- tail(new_data, k)
